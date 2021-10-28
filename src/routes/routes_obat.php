@@ -21,7 +21,7 @@ return function (App $app) {
         $data["name"] = "Bonevian";
 
         // Render template dengan Twig
-        return $this->view->render($response, 'hello.html', $data);
+        return $this->view->render($response, 'layout.html', $data);
     });
 
     // Get ALL
