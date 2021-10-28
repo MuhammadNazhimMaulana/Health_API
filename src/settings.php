@@ -24,6 +24,10 @@ return [
             'dbname' => 'health_db',
             'driver' => 'mysql'
         ],
-        
+
+        // Seting JWT
+        'jwt' => [
+            'secret' => 'iniadalahkunciyangsangatrahasia'
+        ]
     ],
 ];

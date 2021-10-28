@@ -25,9 +25,13 @@ $dependencies($app);
 $middleware = require __DIR__ . '/../src/middleware.php';
 $middleware($app);
 
-// Register routes
-$routes = require __DIR__ . '/../src/routes.php';
-$routes($app);
+// Register routes_obat
+$routes_obat = require __DIR__ . '/../src/routes/routes_obat.php';
+$routes_obat($app);
+
+// Register Routes Auth
+$routes_auth = require __DIR__ . '/../src/routes/routes_auth.php';
+$routes_auth($app);
 
 // Run app
 $app->run();
