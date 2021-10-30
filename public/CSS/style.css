@@ -73,9 +73,33 @@ footer {
 
 hr.light {
   border-top: 1px solid #d5d5d5;
-  width: 75%;
+  width: 100%;
   margin-top: 0.8rem;
   margin-bottom: 1rem;
+}
+
+footer .col-12 h5 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Login */
+.auth {
+  padding: 10px;
+  margin-top: 3.5rem;
+}
+
+.auth .card {
+  box-shadow: -8px 12px 18px 0 rgb(25, 42, 70, 0.13);
+  margin-bottom: 2.2rem;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.auth h3 {
+  text-align: center;
+  font-weight: 600;
+  color: #3b82f6;
 }
 
 /* Media */

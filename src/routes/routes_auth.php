@@ -8,7 +8,28 @@ use \Firebase\JWT\JWT;
 return function (App $app) {
     $container = $app->getContainer();
 
-    //POST Saksi
+    // Tampilan Login
+    $app->get('/login/', function (Request $request, Response $response, array $args) {
+
+        // Render template dengan Twig
+        return $this->view->render($response, 'content/auth/login.html');
+    });
+
+    // Tampilan Login
+    $app->get('/register/', function (Request $request, Response $response, array $args) {
+
+        // Render template dengan Twig
+        return $this->view->render($response, 'content/auth/register.html');
+    });
+
+    // Tampilan Lupa Login
+    $app->get('/forget/', function (Request $request, Response $response, array $args) {
+
+        // Render template dengan Twig
+        return $this->view->render($response, 'content/auth/forget_pass.html');
+    });
+
+    //POST Login
     $app->post("/login/", function (Request $request, Response $response) {
 
         $new_login = $request->getParsedBody();

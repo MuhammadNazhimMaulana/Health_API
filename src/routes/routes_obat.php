@@ -15,15 +15,6 @@ return function (App $app) {
     //     return $container->get('renderer')->render($response, 'index.phtml', $args);
     // });
 
-    // Testing Twig
-    $app->get('/hello', function (Request $request, Response $response, array $args) {
-
-        $data["name"] = "Bonevian";
-
-        // Render template dengan Twig
-        return $this->view->render($response, 'layout.html', $data);
-    });
-
     // Get ALL
     $app->get("/medicines/", function (Request $request, Response $response){
         $sql = "SELECT * FROM tbl_list_obat";

@@ -33,5 +33,9 @@ $routes_obat($app);
 $routes_auth = require __DIR__ . '/../src/routes/routes_auth.php';
 $routes_auth($app);
 
+// Register Routes View
+$routes_view = require __DIR__ . '/../src/routes/routes_view.php';
+$routes_view($app);
+
 // Run app
 $app->run();

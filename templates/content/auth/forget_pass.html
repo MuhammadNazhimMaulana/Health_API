@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Bagian Awal -->
+<div class="auth my-4">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="mb-3">Lupa Password</h3>
+                        <p>Masukkan Email untuk melakukan reset password</p>
+
+                        <form method="POST">
+                            <div class="mb-3">
+                                <label for="user" class="form-label">Email</label>
+                                <input type="text" class="form-control" name="email" id="user" aria-describedby="email_help">
+                                <div id="email_help" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="d-grid gap-2 my-4">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <p>Want to be a new member? <a href="#">Create Account</a></p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
