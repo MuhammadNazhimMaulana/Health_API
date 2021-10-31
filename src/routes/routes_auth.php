@@ -30,14 +30,14 @@ return function (App $app) {
     });
 
     //POST Login
-    $app->post("/login/", function (Request $request, Response $response) {
+    $app->post("/login/", function (Request $request, Response $response, array $args) {
 
         $new_login = $request->getParsedBody();
 
         $username = trim(strip_tags($new_login['username']));
         $password = trim(strip_tags($new_login['password']));
 
-        $sql = "SELECT id_pengguna_api, username, api_key FROM tbl_api_users WHERE username = :username AND password = :password";
+        $sql = "SELECT id_pengguna_api, username, api_key, email FROM tbl_api_users WHERE username = :username AND password = :password";
 
         $stmt = $this->db->prepare($sql);
 
@@ -62,7 +62,16 @@ return function (App $app) {
             );
             $token = JWT::encode($token, $settings['jwt']['secret'], "HS256");
 
-            return $response->withJson(["status" => "Sukses", "Data" => $user, 'Token' => $token], 200);
+            $data_login =  [
+                'token' => $token,
+                'user' => $user->username,
+                'email' => $user->email,
+                'key' => $user->api_key,
+                'status' => 'berhasil'
+            ];
+
+            // Render template dengan Twig
+            return $this->view->render($response, 'content/auth/info.html', $data_login);
         }
     });
 

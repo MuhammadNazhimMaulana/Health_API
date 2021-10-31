@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Bagian Awal -->
+<div class="auth my-4">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="mb-3">Informasi</h3>
+
+                            <div class="mb-3">
+                                <label for="user" class="form-label">Username</label>
+                                <input type="text" class="form-control" name="username" readonly value="{{ user }}" id="user" aria-describedby="username_help">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">{{ email }}</label>
+                                <input type="email" class="form-control" name="email" readonly value="{{ email }}" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="key" class="form-label">API Key</label>
+                                <input type="text" class="form-control" readonly value="{{ key }}" name="key" id="key">
+                            </div>
+                            <div class="mb-3">
+                                <label for="token" class="form-label">Token JSON</label>
+                                <input type="text" class="form-control" readonly value="{{ token }}" name="token" id="token">
+                                <div id="password_help" class="form-text">Use token to access APi Data</div>
+                            </div>
+                            <div class="d-grid gap-2 my-4">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <p>Back to <a href="/">Home</a>?</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
