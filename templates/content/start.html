@@ -2,13 +2,26 @@
 {% block content %}
 <!-- Bagian Awal -->
     <div class="container-fluid padding">
-        <div class="row sambut text-center">
-            <div class="col-12">
+        <div class="row sambut">
+            <div class="col-12 text-center">
                 <h1 class="display-4">Getting Started</h1>
             </div>
             <hr>
             <div class="col-12">
-                <p class="lead">Selamat Datang</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Using API</h5>
+                            <p class="card-text">For using this API, make sure that you have signed up, if you haven't signed up you may follow this link below</p>
+                            <a href="/register/" class="card-link">Sign Up</a>
+                            <p class="card-text mt-4 mb-4">After signing up you will have a token that could be used for acessing the API itself and all you have to do is just consuming the API and also pay attention with the number of hit that you could make. Here are some links that you could use for the API.</p>
+                            <a href="#">Link</a>
+                            <p class="card-text mt-4 mb-4">However you could also use this link as a tester if you don't want to sign up but remember that this is just a fake API</p>
+                            <ul class="no-extra">
+                                <li><a href="/diseases/">Link</a> (GET All Data)</li>
+                                <li><a href="/diseases/1">Link</a> (Get One Data)</li>
+                            </ul>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

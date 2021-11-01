@@ -29,6 +29,10 @@ $middleware($app);
 $routes_obat = require __DIR__ . '/../src/routes/routes_obat.php';
 $routes_obat($app);
 
+// Register routes_obat
+$routes_penyakit = require __DIR__ . '/../src/routes/routes_penyakit.php';
+$routes_penyakit($app);
+
 // Register Routes Auth
 $routes_auth = require __DIR__ . '/../src/routes/routes_auth.php';
 $routes_auth($app);

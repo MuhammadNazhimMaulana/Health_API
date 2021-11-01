@@ -123,3 +123,8 @@ footer .col-12 h5 {
     padding: 0.7rem;
   }
 }
+
+/* Extra Edit */
+.no-extra {
+  list-style: none;
+}
