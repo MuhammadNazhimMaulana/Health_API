@@ -18,7 +18,7 @@ return function (App $app) {
     // Testing Twig
     $app->get('/', function (Request $request, Response $response, array $args) {
 
-        $data["name"] = "Bonevian";
+        $data["title"] = "Home";
 
         // Render template dengan Twig
         return $this->view->render($response, 'content/home.html', $data);
@@ -27,7 +27,7 @@ return function (App $app) {
     // Halaman Getting Start
     $app->get('/getting-start/', function (Request $request, Response $response, array $args) {
 
-        $data["name"] = "Bonevian";
+        $data["title"] = "Start";
 
         // Render template dengan Twig
         return $this->view->render($response, 'content/start.html', $data);

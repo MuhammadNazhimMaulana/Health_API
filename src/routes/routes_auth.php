@@ -10,23 +10,29 @@ return function (App $app) {
 
     // Tampilan Login
     $app->get('/login/', function (Request $request, Response $response, array $args) {
+        
+        $data["title"] = "Auth";
 
         // Render template dengan Twig
-        return $this->view->render($response, 'content/auth/login.html');
+        return $this->view->render($response, 'content/auth/login.html', $data);
     });
 
     // Tampilan Login
     $app->get('/register/', function (Request $request, Response $response, array $args) {
+        
+        $data["title"] = "Auth";
 
         // Render template dengan Twig
-        return $this->view->render($response, 'content/auth/register.html');
+        return $this->view->render($response, 'content/auth/register.html', $data);
     });
 
     // Tampilan Lupa Login
     $app->get('/forget/', function (Request $request, Response $response, array $args) {
+        
+        $data["title"] = "Auth";
 
         // Render template dengan Twig
-        return $this->view->render($response, 'content/auth/forget_pass.html');
+        return $this->view->render($response, 'content/auth/forget_pass.html', $data);
     });
 
     //POST Login
