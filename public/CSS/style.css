@@ -8,6 +8,10 @@
   padding-top: 2rem;
 }
 
+.text {
+  text-align: justify;
+}
+
 .sambut hr {
   border-top: 2px solid #b4b4b4;
   width: 95%;
