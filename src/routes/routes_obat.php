@@ -21,7 +21,7 @@ return function (App $app) {
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
-        return $response->withJson(["Status" => "Sukses", "Data Seluruh Obat" => $result], 200);
+        return $response->withJson(["Status" => "Sukses", "Data_Seluruh_Obat" => $result], 200);
     });
     
     // Get One
@@ -31,7 +31,7 @@ return function (App $app) {
         $stmt = $this->db->prepare($sql);
         $stmt->execute([":id_list" => $id_list]);
         $result = $stmt->fetch();
-        return $response->withJson(["Status" => "Sukses", "Data Obat" => $result], 200);
+        return $response->withJson(["Status" => "Sukses", "Data_Obat" => $result], 200);
     });
 
     //Search Obat
@@ -42,7 +42,7 @@ return function (App $app) {
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
-        return $response->withJson(["Status" => "Sukses", "Data Obat" => $result], 200);
+        return $response->withJson(["Status" => "Sukses", "Data_Obat" => $result], 200);
     });
 
     // Post Obat
