@@ -1,3 +1,3 @@
 # Health API
 
-API yang dibuat untuk memberikan informasi data mengenai kesehatan
+Sebuah API (Application Program Interface) yang dibuat untuk memberikan informasi data mengenai kesehatan
